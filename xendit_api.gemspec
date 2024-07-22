@@ -3,7 +3,7 @@
 require_relative 'lib/xendit_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'xendit_api'
+  spec.name = 'xendit_api'
   spec.version       = XenditApi::VERSION
   spec.authors       = ['Philip Lambok']
   spec.email         = ['philiplambok71@gmail.com']
