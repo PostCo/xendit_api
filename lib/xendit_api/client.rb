@@ -1,4 +1,3 @@
-require 'faraday_middleware'
 require 'xendit_api/middleware/handle_response_exception'
 require 'xendit_api/api/virtual_account'
 require 'xendit_api/api/ewallet'
@@ -21,7 +20,7 @@ module XenditApi
 
     def initialize(authorization = nil, options = {})
       @connection = Faraday.new(url: BASE_URL) do |connection|
-        connection.request :basic_auth, authorization, ''
+        connection.request :authorization, :basic, authorization, ''
         connection.request :json
         connection.response :json
         connection.options.timeout = options[:timeout] if options.key?(:timeout)
