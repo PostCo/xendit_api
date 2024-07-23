@@ -96,6 +96,10 @@ module XenditApi
       @report || XenditApi::Api::Report.new(self)
     end
 
+    def callback_url
+      @callback_url || XenditApi::Api::CallbackUrl.new(self)
+    end
+
     def get(url, params = nil, headers = {})
       response = @connection.get(url, params, headers)
       response.body
