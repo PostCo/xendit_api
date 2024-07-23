@@ -12,6 +12,7 @@ require 'xendit_api/api/transfer'
 require 'xendit_api/api/transaction'
 require 'xendit_api/api/fee_rule'
 require 'xendit_api/api/report'
+require 'xendit_api/api/callback_url'
 require 'logger'
 
 module XenditApi

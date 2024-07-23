@@ -1,5 +1,5 @@
 require 'xendit_api/api/base'
-require 'xendit_api/model/report'
+require 'xendit_api/model/callback_url'
 
 module XenditApi
   module Api
