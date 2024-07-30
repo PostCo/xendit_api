@@ -28,6 +28,12 @@ module XenditApi
 
           XenditApi::Model::V2::Invoice.new(response)
         end
+
+        def expire(invoice_id)
+          response = client.post("/invoices/#{invoice_id}/expire!")
+
+          XenditApi::Model::V2::Invoice.new(response)
+        end
       end
     end
   end
